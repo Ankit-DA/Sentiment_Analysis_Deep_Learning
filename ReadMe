@@ -38,3 +38,10 @@ Further Enhancements -
 
 5. Increasing number of hidden layers and optimizing other parameters within CNN Model training
 
+
+Execution
+
+1. Update the file Sentiment_Analysis-Copy2.ipynb with correct fille paths
+
+2. Execute the notebook
+
