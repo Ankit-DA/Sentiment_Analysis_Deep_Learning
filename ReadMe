@@ -1,0 +1,40 @@
+This repository comprises of using Deep Learning model for Sentiment Analysis. It le
+
+### We are using multiple datasets to train the Sentiment Analysis Classifier.
+1. IMDB dataset taken from Kaggle <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews" target="_blank">Kaggle IMDB Dataset</a>
+
+2. Yelp reviews dataset
+
+3. Amazon product reviews
+
+4. Random list of positive comments
+
+5. Random list of negative comments
+
+#1D Convolutional Layers
+
+Convolutional Neural Networks (ConvNets) perform particularly well on computer vision problems due to their ability to operate convolutionally, that is extracting features from local input patches allowing for representation modularity and data efficiency. The same properties that make ConvNets the best choice for computer vision-related problems also make them highly significant to sequence processing. 1D convolution layers are also translation invariant in the sense that because the same input transformation is performed on every patch, a pattern learned at a certain position in a sentence can later be recognized at a different position. Similar to 2D ConvNets, 1D patches can be extracted from an input and output the maximum or average value, a process technically referred to as Max Pooling and Average Pooling respectively, and just as with 2D ConvNets, this is also used for reducing the length of the 1D input (technically known as subsampling).
+
+# We have also used Callback Functions to optimizing Model training time
+We tend to lose control over how our model trains on the provided dataset the moment we call the fit() or fit_generator() method on our model and this means that with a model not “smart” enough, we can only watch it perform very badly during training or quit the training and start allover again. This process can really be expensive and ineffective therefore in order to avoid that, we would like to develop a model that can self-introspect and dynamically take action that will positively affect training. There are many things one cannot predict during training. For instance, one cannot tell the exact number of epochs that will be needed to achieve an optimal validation loss and accuracy.
+
+Mostly during training, we tend to use an arbitrary number of epochs and if the model overfits before that number of epochs is reached then we reduce the number of epochs and train again otherwise, we increase the number of epochs and this approach is very wasteful. A much better way to handle this during training is to stop training when we realize that the validation loss is no longer improving. This can be achieved using a Keras callback. A callback is an object (a class instance implementing specific methods) that is passed to the model in the call to fit and that is called by the model at various points during training. It has access to all the available data about the state of the model and its performance, and it can take action: interrupt training, save a model, load a different weight set, or otherwise alter the state of the model.
+Some ways by which callbacks can be used are:
+
+* Model checkpointing — Saving the current weights of the model at different points during training.
+* Early stopping — Interrupting training when the validation loss is no longer improving (and save the best model obtained during training).
+* Dynamically adjusting the value of certain parameters during training such as the learning rate optimizer.
+* Logging training and validation metrics during training or visualizing representations learned by the model as they’re updated. (The Keras progress bar we always see in our terminal during training!)
+
+Further Enhancements -
+
+1. Improving Word Embeddings by increasing dimenions of Word Embedding from 50 to 100 
+
+2. Leveraging existing pre-trained word embedding (Google News dataset (about 100 billion words))
+
+3. Training the model on a larger dataset
+
+4. Currently Model is trained on only first 500 words of each review/comment. This can be increased to 100 words
+
+5. Increasing number of hidden layers and optimizing other parameters within CNN Model training
+
