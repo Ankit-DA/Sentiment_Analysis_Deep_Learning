@@ -1,4 +1,4 @@
-This repository comprises of using Deep Learning model for Sentiment Analysis. It le
+This repository comprises of using Deep Learning model for Sentiment Analysis. It leverages CNN , LSTM and other methods
 
 ### We are using multiple datasets to train the Sentiment Analysis Classifier.
 1. IMDB dataset taken from Kaggle <a href="https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews" target="_blank">Kaggle IMDB Dataset</a>
